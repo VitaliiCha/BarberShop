@@ -68,6 +68,7 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--link-color);
+  cursor: pointer;
 }
 /* Hero section */
 .hero-section {
@@ -150,6 +151,7 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--second-color-title);
+  cursor: pointer;
 }
 
 /* Prices section */
@@ -186,6 +188,7 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--link-color);
+  cursor: pointer;
 }
 /* Benefits Section */
 .benefits-qnt-text {
