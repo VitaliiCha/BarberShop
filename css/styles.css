@@ -10,10 +10,28 @@
   --accent-color: rgba(255, 108, 0, 1);
   --link-color: #ffffff;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+ul {
+  padding-left: 0;
+}
+/* * {
+  outline: 1px solid black;
+} */
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  /* background: var(--background-color); */
+  background: #534d4d;
+  color: var(--color-text);
 }
 .list {
   list-style: none;
@@ -31,11 +49,57 @@ body {
   margin: -1px;
 }
 
-/* heder */
-.page-header {
-  background: rgba(25, 28, 38, 0.2);
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.sections {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.btn {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--link-color);
+  background: transparent;
+  box-sizing: border-box;
+  width: 160px;
+  height: 40px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background: var(--accent-color);
+  color: var(--link-color);
+}
+/* header */
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.header-logo {
+  margin-right: 130px;
 }
 /* navigation */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
 .text-nav {
   text-decoration: none;
   font-weight: 600;
@@ -48,6 +112,9 @@ body {
 .text-nav:focus {
   color: var(--accent-color);
 }
+.header-contacts {
+  margin-left: auto;
+}
 .contact-link {
   text-decoration: none;
   font-weight: 600;
@@ -56,25 +123,23 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--link-color);
+  margin-right: 40px;
 }
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
 }
-.online-booking {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.3;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--link-color);
-  cursor: pointer;
-}
+
 /* Hero section */
-.hero-section {
-  background: rgba(25, 28, 38, 0.2);
-}
+
 /* Social network */
+
+.hero-conteiner {
+  display: flex;
+}
+.hero-social {
+  width: 100px;
+}
 .social-networks-text {
   text-decoration: none;
   font-weight: 600;
@@ -87,15 +152,21 @@ body {
 .social-networks-text:focus {
   color: var(--accent-color);
 }
+
 /* hero contents */
+
+.hero-wraper {
+  padding: 272px 0 208px 100px;
+  flex-grow: 1;
+}
 .hero-pre-title {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.35;
   text-transform: uppercase;
   color: var(--color-pre-titel);
+  margin-bottom: 20px;
 }
-
 .hero-title {
   font-family: 'Raleway';
   font-style: normal;
@@ -104,22 +175,36 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--color-title);
+  margin-bottom: 20px;
 }
-
 .hero-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.65;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
+  width: 360px;
 }
 
+/* About section */
+
+.about-section {
+  display: flex;
+  padding-right: 100px;
+}
+.about-section-img {
+  display: flex;
+}
+.about-section-photo {
+  margin-right: 30px;
+}
 .about-pre-title {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.35;
   text-transform: uppercase;
   color: var(--second-color-title);
+  margin-bottom: 20px;
 }
 .about-title {
   font-family: 'Raleway';
@@ -129,57 +214,81 @@ body {
   line-height: 1.15;
   letter-spacing: 0.05em;
   color: var(--second-color-title);
+  margin-bottom: 20px;
 }
 .about-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.65;
   letter-spacing: 0.02em;
-  color: var(--color-text);
+  margin-bottom: 20px;
 }
 .about-second-description {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.85;
   letter-spacing: 0.02em;
-  color: var(--color-text);
+  margin-bottom: 42px;
 }
 .about-btn {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.35;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+
   color: var(--second-color-title);
-  cursor: pointer;
 }
 
 /* Prices section */
-.prices-section {
-  background: rgba(25, 28, 38, 0.2);
+.prices {
+  background: rgba(25, 28, 38, 1);
 }
+
 .price-pre-title {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.35;
   text-transform: uppercase;
   color: var(--color-pre-titel);
+  margin-bottom: 20px;
 }
 .price-title {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
+  font-size: 42px;
+  line-height: 1.15;
   letter-spacing: 0.05em;
   color: var(--color-title);
+  margin-bottom: 44px;
 }
-.prices-text {
+.prices-item {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.65;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
+  display: flex;
+  margin-bottom: 44px;
+}
+.bords {
+  flex-grow: 1;
+}
+.bords:first-child {
+  margin-right: 30px;
+}
+.prices-bord {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.prices-bord:not(:last-child) {
+  padding-bottom: 20px;
+}
+.prices-bord:first-child {
+  padding-top: 30px;
+}
+.prices-bord:last-child {
+  padding-bottom: 30px;
 }
 .price-btn {
   font-weight: 600;
@@ -189,8 +298,37 @@ body {
   text-transform: uppercase;
   color: var(--link-color);
   cursor: pointer;
+  margin: 0 auto;
+  display: block;
 }
 /* Benefits Section */
+
+.benefits-section {
+  display: flex;
+}
+.benefits {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 130px;
+}
+.benefits-couple-bord:first-child {
+  margin-right: 30px;
+  margin-bottom: 35px;
+}
+.benefits-couple-bord:last-child {
+  margin-top: 35px;
+}
+.benefits-bord {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  height: 135px;
+  padding: 20px 24px;
+  background: #f7f7f7;
+}
+.benefits-bord:first-child {
+  margin-bottom: 30px;
+}
 .benefits-qnt-text {
   font-family: 'Open Sans';
   font-style: normal;
@@ -200,25 +338,50 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: var(--second-color-title);
+  padding-bottom: 6px;
 }
 sup {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.4;
-  text-align: center;
   color: var(--accent-color);
-
-  position: absolute;
-  width: 13px;
-  height: 22px;
 }
 .benefits-text {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.35;
+  text-align: center;
   color: var(--second-color-title);
 }
-
+.benefits-text-wrap {
+  margin-right: 70px;
+}
+.benefits-pre-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--second-color-title);
+}
+.benefits-title {
+  margin-bottom: 20px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: var(--second-color-title);
+}
+.benefits-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
 /* Our barbers section */
 
 .barbers-pre-title {
@@ -227,6 +390,7 @@ sup {
   line-height: 1.35;
   text-transform: uppercase;
   color: var(--second-color-title);
+  margin-bottom: 20px;
 }
 .barbers-title {
   font-family: 'Raleway';
@@ -236,9 +400,16 @@ sup {
   line-height: 1.15;
   letter-spacing: 0.05em;
   color: var(--second-color-title);
+  margin-bottom: 44px;
 }
 /* Barbers list */
-
+.barbers-list {
+  display: flex;
+  justify-content: space-between;
+}
+.barbers-items {
+  flex-basis: calc((100% - 60px) / 3);
+}
 .barbers-name {
   font-size: 18px;
   line-height: 1.4;
@@ -254,14 +425,27 @@ sup {
 }
 
 /* Gallery section */
+.gallery-list {
+  display: flex;
+  justify-content: space-between;
+}
 .gallery-pre-title {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.35;
   text-transform: uppercase;
   color: var(--second-color-title);
+  margin-bottom: 44px;
 }
-/* Booking section */
+/* booking-contacts-section */
+
+.booking-contacts-section {
+  background: rgba(25, 28, 38, 1);
+}
+.wrap-sections {
+  display: flex;
+  flex-basis: calc((100% - 30px) / 2);
+}
 .booking-title {
   font-family: 'Raleway';
   font-style: normal;
@@ -272,6 +456,9 @@ sup {
   color: var(--color-title);
 }
 /* Contacts section */
+.contact-section {
+  margin-left: 100px;
+}
 .contact-title {
   font-family: 'Raleway';
   font-style: normal;
@@ -280,6 +467,11 @@ sup {
   line-height: 1.15;
   letter-spacing: 0.05em;
   color: var(--color-title);
+  margin-bottom: 40px;
+}
+
+.our-contacts li:not(:last-child) {
+  margin-bottom: 20px;
 }
 .contakt-adress {
   font-family: 'Open Sans';
@@ -317,6 +509,8 @@ sup {
   line-height: 1.35;
   text-transform: uppercase;
   color: var(--color-title);
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 .contact-work-time {
   font-weight: 400;
@@ -326,20 +520,32 @@ sup {
   color: var(--second-color-text);
 }
 /* Footer */
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+}
 .footer-text {
-    font-weight: 600;
-font-size: 11px;
-line-height: 1.35;
-letter-spacing: 0.2em;
-color: var(--second-color-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: 0.2em;
+  color: var(--second-color-text);
+}
+.header-networks {
+  display: flex;
+}
+.header-list:not(:last-child) {
+  margin-right: 40px;
 }
 .footer-social-networks {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.35;
-    letter-spacing: 0.2em;
-    color: var(--second-color-title);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: 0.2em;
+  color: var(--second-color-title);
 }
 .footer-social-networks:hover,
 .footer-social-networks:focus {
