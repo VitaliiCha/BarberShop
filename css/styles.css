@@ -29,8 +29,7 @@ ul {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  /* background: var(--background-color); */
-  background: #534d4d;
+  background: var(--background-color);
   color: var(--color-text);
 }
 .list {
@@ -80,6 +79,23 @@ body {
 .btn:focus {
   background: var(--accent-color);
   color: var(--link-color);
+}
+.pre-title {
+  font-weight: 600;
+  font-size: 11;
+  line-height: 1.4;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  
+}
+.pre-title::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: currentColor;
+  justify-content: center;
+  margin-right: 20px;
 }
 /* header */
 
@@ -158,6 +174,9 @@ body {
 .hero-wraper {
   padding: 272px 0 208px 100px;
   flex-grow: 1;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../imgages/slider/Slider-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-pre-title {
   font-weight: 600;
@@ -231,7 +250,7 @@ body {
   margin-bottom: 42px;
 }
 .about-btn {
-  margin: 0 auto;
+  
   display: block;
 
   color: var(--second-color-title);
@@ -239,7 +258,10 @@ body {
 
 /* Prices section */
 .prices {
-  background: rgba(25, 28, 38, 1);
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image:url(../imgages/img.png), linear-gradient(#111319, #111319);
+  background-size: cover;
 }
 
 .price-pre-title {
@@ -274,12 +296,27 @@ body {
 }
 .bords:first-child {
   margin-right: 30px;
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.bords:last-child {
+  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 .prices-bord {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   padding-right: 20px;
   padding-left: 20px;
+}
+.prices-bord::after {
+  content: "";
+  height: 1px;
+  background: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+  margin: 0 12px;
+}
+.prices-bord > p:last-child {
+  order: 1;
 }
 .prices-bord:not(:last-child) {
   padding-bottom: 20px;
@@ -301,6 +338,7 @@ body {
   margin: 0 auto;
   display: block;
 }
+
 /* Benefits Section */
 
 .benefits-section {
@@ -383,7 +421,9 @@ sup {
   color: var(--color-text);
 }
 /* Our barbers section */
-
+.barber-section {
+  background-color: #F7F7F7;
+}
 .barbers-pre-title {
   font-weight: 600;
   font-size: 11px;
@@ -411,19 +451,45 @@ sup {
   flex-basis: calc((100% - 60px) / 3);
 }
 .barbers-name {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 8px;
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: var(--second-color-title);
 }
 .barbers-style {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.35;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+.barbers-social-list {
+  display: flex;
+  justify-content: center;
+}
 
+.barbers-social:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link {
+  padding: 12px;
+  background: var(--link-color);
+  border-radius: 50%;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+}
+.social-link:hover,
+.social-link:focus {
+  fill: var(--accent-color);
+}
 /* Gallery section */
 .gallery-list {
   display: flex;
@@ -437,14 +503,13 @@ sup {
   color: var(--second-color-title);
   margin-bottom: 44px;
 }
-/* booking-contacts-section */
+/* Booking Contacts section */
 
 .booking-contacts-section {
   background: rgba(25, 28, 38, 1);
 }
 .wrap-sections {
   display: flex;
-  flex-basis: calc((100% - 30px) / 2);
 }
 .booking-title {
   font-family: 'Raleway';
@@ -458,6 +523,7 @@ sup {
 /* Contacts section */
 .contact-section {
   margin-left: 100px;
+  margin-right: 215px;
 }
 .contact-title {
   font-family: 'Raleway';
@@ -470,8 +536,17 @@ sup {
   margin-bottom: 40px;
 }
 
-.our-contacts li:not(:last-child) {
+.our-contacts > li:not(:last-child) {
   margin-bottom: 20px;
+}
+.our-contacts > li {
+  display: flex;
+}
+.comtacts-svg {
+  fill: var(--second-color-text);
+  margin-right: 16px;
+  display: block;
+  align-items: center;
 }
 .contakt-adress {
   font-family: 'Open Sans';
@@ -482,6 +557,8 @@ sup {
   line-height: 1.65;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
+  width: 200px;
+  
 }
 .contact-phone {
   font-family: 'Open Sans';
@@ -535,7 +612,21 @@ sup {
 }
 .header-networks {
   display: flex;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+  color: var(--second-color-title);
+  
 }
+.header-networks::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: currentColor;
+  margin: auto 40px;
+}
+
 .header-list:not(:last-child) {
   margin-right: 40px;
 }
