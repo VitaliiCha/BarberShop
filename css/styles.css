@@ -80,6 +80,11 @@ body {
   background: var(--accent-color);
   color: var(--link-color);
 }
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
 .pre-title {
   font-weight: 600;
   font-size: 11;
@@ -87,10 +92,9 @@ body {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  
 }
 .pre-title::before {
-  content: "";
+  content: '';
   height: 1px;
   width: 60px;
   background: currentColor;
@@ -124,10 +128,7 @@ body {
   letter-spacing: 0.1em;
   color: var(--link-color);
 }
-.text-nav:hover,
-.text-nav:focus {
-  color: var(--accent-color);
-}
+
 .header-contacts {
   margin-left: auto;
 }
@@ -140,10 +141,6 @@ body {
   text-transform: uppercase;
   color: var(--link-color);
   margin-right: 40px;
-}
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--accent-color);
 }
 
 /* Hero section */
@@ -174,7 +171,8 @@ body {
 .hero-wraper {
   padding: 272px 0 208px 100px;
   flex-grow: 1;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../imgages/slider/Slider-1.jpg");
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url('../imgages/slider/Slider-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -250,7 +248,6 @@ body {
   margin-bottom: 42px;
 }
 .about-btn {
-  
   display: block;
 
   color: var(--second-color-title);
@@ -260,8 +257,9 @@ body {
 .prices {
   max-width: 1600px;
   margin: 0 auto;
-  background-image:url(../imgages/img.png), linear-gradient(#111319, #111319);
+  background-image: url(../imgages/img.png), linear-gradient(#111319, #111319);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .price-pre-title {
@@ -296,10 +294,10 @@ body {
 }
 .bords:first-child {
   margin-right: 30px;
-  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .bords:last-child {
-  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 .prices-bord {
   display: flex;
@@ -309,7 +307,7 @@ body {
   padding-left: 20px;
 }
 .prices-bord::after {
-  content: "";
+  content: '';
   height: 1px;
   background: rgba(157, 164, 189, 0.12);
   flex-grow: 1;
@@ -422,7 +420,7 @@ sup {
 }
 /* Our barbers section */
 .barber-section {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 .barbers-pre-title {
   font-weight: 600;
@@ -486,10 +484,7 @@ sup {
   display: flex;
   justify-content: center;
 }
-.social-link:hover,
-.social-link:focus {
-  fill: var(--accent-color);
-}
+
 /* Gallery section */
 .gallery-list {
   display: flex;
@@ -539,16 +534,15 @@ sup {
 .our-contacts > li:not(:last-child) {
   margin-bottom: 20px;
 }
-.our-contacts > li {
+.our-contacts {
   display: flex;
+  flex-direction: column;
 }
-.comtacts-svg {
-  fill: var(--second-color-text);
-  margin-right: 16px;
-  display: block;
+
+.contact-adress {
+  display:inline-flex;
   align-items: center;
-}
-.contakt-adress {
+  gap: 16px;
   font-family: 'Open Sans';
   font-style: normal;
   text-decoration: none;
@@ -557,10 +551,12 @@ sup {
   line-height: 1.65;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
-  width: 200px;
-  
+  fill: var(--second-color-text);
+  width: 230px;
 }
 .contact-phone {
+  display: flex;
+  gap: 16px;
   font-family: 'Open Sans';
   font-style: normal;
   text-decoration: none;
@@ -569,8 +565,11 @@ sup {
   line-height: 1.65;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
+  fill: var(--second-color-text);
 }
 .contact-email {
+  display: flex;
+  gap: 16px;
   font-family: 'Open Sans';
   font-style: normal;
   text-decoration: none;
@@ -579,6 +578,8 @@ sup {
   line-height: 1.65;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
+  fill: var(--second-color-text);
+  text-decoration: underline;
 }
 .contact-pre-title {
   font-weight: 600;
@@ -617,10 +618,9 @@ sup {
   line-height: 15px;
   letter-spacing: 0.2em;
   color: var(--second-color-title);
-  
 }
 .header-networks::before {
-  content: "";
+  content: '';
   height: 1px;
   width: 60px;
   background: currentColor;
@@ -638,7 +638,4 @@ sup {
   letter-spacing: 0.2em;
   color: var(--second-color-title);
 }
-.footer-social-networks:hover,
-.footer-social-networks:focus {
-  color: var(--accent-color);
-}
+
