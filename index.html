@@ -17,6 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Barbershop</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -27,7 +31,7 @@
         <!-- logo -->
         <img src="./imgages/Logo.svg" alt="BarberShop logo" class="header-logo" />
         <!-- navigation -->
-        <nav>
+        <nav class="header-nav">
           <ul class="site-nav list">
             <li class="header-item">
               <a href="#about" class="text-nav link">About</a>
@@ -45,7 +49,7 @@
         </nav>
         <div class="header-contacts">
           <a href="tel:+380441111111" class="contact-link link">+38 044 111 11 11</a>
-          <button type="button" class="btn">online-booking</button>
+          <button type="button" class="btn" data-modal-open>online-booking</button>
         </div>
       </div>
     </header>
@@ -53,19 +57,21 @@
       <!-- Hero section -->
       <section>
         <!-- Social network -->
+       
         <div class="conteiner hero-conteiner">
-          <ul class="hero-social list">
-            <li class="hero-item">
-              <a href="" rel="noopener noreferrer nofollow" class="social-networks-text">Youtube</a>
-            </li>
-            <li class="hero-item">
-              <a href="" rel="noopener noreferrer nofollow" class="social-networks-text"
-                >Instagram</a
-              >
-            </li>
-          </ul>
+          <div class="hero-social-wraper">
+            <ul class="hero-social list ">
+              <li class="hero-item">
+                <a href="" rel="noopener noreferrer nofollow" class="social-networks-text link"
+                >Instagram</a>
+                </li>
+              <li class="hero-item">
+                <a href="" rel="noopener noreferrer nofollow" class="social-networks-text link">Youtube</a>
+              </li>    
+            </ul>
+          </div>
           <!-- hero contents -->
-          <div class="hero-wraper">
+          <div class="hero-wraper ">
             <p class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
             <h1 class="hero-title">BarberShop</h1>
             <p class="hero-description">
@@ -75,6 +81,7 @@
           <!-- Slider -->
           <!-- <img src="./imgages/slider/Slider-1.jpg" alt="slider fotos" /> -->
         </div>
+    
       </section>
       <!-- About section -->
       <section>
@@ -99,7 +106,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div >
             <p class="about-pre-title pre-title">About</p>
             <h2 class="about-title" id="about">Best Barbershop in your city</h2>
             <p class="about-description">
@@ -218,6 +225,7 @@
                 alt="John Smith"
                 width="370"
                 height="346"
+                class="barber-img"
               />
               <h3 class="barbers-name">John Smith</h3>
               <p class="barbers-style">Extreme Barber</p>
@@ -258,6 +266,7 @@
                 alt="Michele Doe"
                 width="370"
                 height="346"
+                class="barber-img"
               />
               <h3 class="barbers-name">Michele Doe</h3>
               <p class="barbers-style">Extreme Barber</p>
@@ -297,6 +306,7 @@
                 alt="Alan Black"
                 width="370"
                 height="346"
+                class="barber-img"
               />
               <h3 class="barbers-name">Alan Black</h3>
               <p class="barbers-style">Extreme Barber</p>
@@ -338,36 +348,50 @@
         <div class="">
           <p class="gallery-pre-title pre-title">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hiden">Galery</h2>
-          <ul class="gallery-list list">
-            <li>
-              <img src="./imgages/galery/1.jpg" alt="foto from galery" width="270" height="360" />
+          
+           <ul class="gallery-list list">
+            
+            <li class="gallery-items">
+              <div class="gallery-thumb">
+                <img src="./imgages/galery/1.jpg" alt="foto from galery" width="270" height="360" />
+                <p class="gallery-items-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto a porro, modi consequatur voluptatibus? Voluptate est, ipsa, eius vel, nulla labore deleniti placeat soluta voluptates corrupti incidunt quia velit.</p>
+              </div>
             </li>
-            <li>
+            
+            <li class="gallery-items">
+              <div class="gallery-thumb">
               <img src="./imgages/galery/2.jpg" alt="foto from galery" width="270" height="360" />
+              <p class="gallery-items-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, quaerat. Vitae sit distinctio molestias dignissimos neque voluptatem minima velit ut nulla hic qui ducimus laboriosam iure, debitis magni repudiandae officiis.</p>
+            </div>
             </li>
-            <li>
+            <li class="gallery-items">
+              <div class="gallery-thumb">
               <img src="./imgages/galery/3.jpg" alt="foto from galery" width="270" height="360" />
+              <p class="gallery-items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum adipisci amet praesentium quam ab, officia veritatis officiis tempore corporis, in modi recusandae velit unde illo iusto animi optio? Repudiandae, quae?</p>
+            </div>
             </li>
-            <li>
+            <li class="gallery-items">
+              <div class="gallery-thumb">
               <img src="./imgages/galery/4.jpg" alt="foto from galery" width="270" height="360" />
+              <p class="gallery-items-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt sequi aliquam delectus odit accusantium voluptatum asperiores? Facilis, dolorem ea! Harum maxime placeat at delectus aliquid consectetur iure molestias provident pariatur.</p>
+            </div>
             </li>
-          </ul>
+           </ul>
+          
         </div>
       </section>
       <!-- Booking Contacts section -->
-      <div class="booking-contacts-section">
-        <div class="conteiner sections wrap-sections">
+      <div class="booking-contacts-wrap ">
+        <div class="conteiner booking-conteiner">
           <section class="booking-section">
-            <div>
               <h2 class="booking-title">Online-booking</h2>
               <!-- TOO DO -->
-              <ul>
-                <li><input type="text" name="" id="" />Name*</li>
-                <li><input type="text" name="" id="" />Phone*</li>
-                <li><input type="text" name="" id="" />Message</li>
-              </ul>
-              <button type="button" class="btn">send</button>
-            </div>
+              <form class="booking-form">
+                <input type="text" name="" id="name" placeholder="Name*" class="form-item"/>
+                <input type="tel" name="" id="phone" placeholder="Phone*" class="form-item"/>
+                <textarea name="message" id="message" placeholder="Message"  cols="76px" rows="6" class="form-item"></textarea>
+              </form>
+              <button type="submit" class="btn">send</button>
           </section>
           <!-- Contacts section -->
           <section class="contact-section">
@@ -420,5 +444,136 @@
         </ul>
       </div>
     </footer>
+    <!-- modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>X</button>
+      <p class="modal-title">Замовити послугу:</p>
+      <form action="" class="modal-form">
+        <div class="form-element">
+          <label for="name">Введіть імя *</label>
+          <div class="input-wrap">           
+            <input type="text" id="name" minlength="5" placeholder="Vitalii" required>
+            <svg viewBox="0 0 100 100" width="20px">
+              <use href="./imgages/sprait.svg#icon-person"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="form-element">
+          <label for="password">Пароль</label>
+          <div class="input-wrap">
+            <input type="password" id="password" placeholder="kdvdk123" minlength="5" maxlength="12">
+            <svg viewBox="0 0 100 100" width="20px">
+              <use href="./imgages/sprait.svg#icon-key"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="form-element">
+          <label for="email" title="Введіть адрес електронної пошти">Введіть адрес електронної пошти</label>
+          <div class="input-wrap">
+            <input type="email" id="email"  placeholder="your.email@gmail.com">
+            <svg viewBox="0 0 100 100" width="20px" >
+              <use href="./imgages/sprait.svg#icon-mail"></use>
+            </svg>
+          </div>
+          </div>
+        <div class="form-element">
+          <label for="tel" title="+16471111111">phone number:</label>
+          <div class="input-wrap">
+            <input type="tel" id="tel" placeholder="+16471111111">
+            <svg viewBox="0 0 100 100" width="20px" >
+              <use href="./imgages/sprait.svg#icon-phone"></use>
+            </svg>
+          </div>
+        </div>
+        <!-- <div class="form-element">
+          <label for="number" >for example: 5</label>
+          <input type="number" id="number">
+        </div> -->
+        <!-- <div class="form-element">
+          <label for="file">Додай файл</label>
+          <input type="file" id="file" accept="image/gif, image/png">
+        </div> -->
+        <!-- <div class="form-element">
+          <label for="search">Пошук:</label>
+          <input type="search" id="search">
+        </div> -->
+        <div class="form-area">
+          <label for="area"></label>
+          <textarea name="area" id="area" cols="47" rows="6" placeholder="Коментар"></textarea>
+        </div>
+        <!-- <div role="group"> -->
+          <ul class="form-radio list">
+            <li><label for="online">online</label>
+            <input type="radio" id="online" name="event" checked></li>
+            <li><label for="offline">offline</label>
+            <input type="radio" id="offline" name="event"></li>
+          </ul>
+        <!-- </div> -->
+        <ul class="form-checkbox list">
+          <li>
+            <input class="checkbox visually-hiden" type="checkbox" id="js" name="language" checked>
+            <label class="checkbox-list" for="js">
+              <div class="checkbox-custom">
+                <svg viewBox="0 0 100 100" width="13px" >
+                  <use href="./imgages/sprait.svg#icon-check"></use>
+                </svg>
+              </div>
+             <span class="checkbox-text">JS</span>
+            </label>
+            
+          </li>
+          <li>
+            <input class="checkbox visually-hiden" type="checkbox" id="c++" name="language">
+            <label class="checkbox-list" for="c++">
+              <div class="checkbox-custom">
+                <svg viewBox="0 0 100 100" width="13px" >
+                  <use href="./imgages/sprait.svg#icon-check"></use>
+                </svg>
+              </div>
+              <span class="checkbox-text">C++</span>
+            </label>
+          </li>  
+          <li>
+            <input class="checkbox visually-hiden" type="checkbox" id="php" name="language">
+            <label class="checkbox-list" for="php">
+              <div class="checkbox-custom">
+                <svg viewBox="0 0 100 100" width="13px" >
+                  <use href="./imgages/sprait.svg#icon-check"></use>
+                </svg>
+              </div>
+              <span class="checkbox-text">PHP</span>
+            </label>
+          </li>
+          <li>
+            <input class="checkbox visually-hiden" type="checkbox" id="c#" name="language">
+            <label class="checkbox-list" for="c#">
+              <div class="checkbox-custom">
+                <svg viewBox="0 0 100 100" width="13px" >
+                  <use href="./imgages/sprait.svg#icon-check"></use>
+                </svg>
+              </div>
+              <span class="checkbox-text">C#</span>
+            </label>
+          </li>  
+        </ul>
+        <div class="accept">
+          <input class="checkbox visually-hiden" type="checkbox" id="accept" checked>
+          <label for="accept">
+            <div class="checkbox-custom">
+              <svg viewBox="0 0 100 100" width="13px" >
+                <use href="./imgages/sprait.svg#icon-check"></use>
+              </svg>
+            </div>
+            <span>я погоджуюсь</span>
+          </label>
+          
+        </div>
+        <button type="submit" class="btn modal-btn">Відправити</button>
+        <button type="reset" class="btn modal-btn">Скинути</button>
+      </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
